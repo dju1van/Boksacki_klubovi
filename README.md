@@ -9,7 +9,7 @@ Ovaj repozitorij sadrži 5 datoteka uključujući i ovu (README.md). Datoteka `B
 **Datum kreiranja**: 22-10-2024 (dd-mm-yyyy)  
 **Zadnje ažurirano**: 26-10-2024 (dd-mm-yyyy)  
 **Svrha skupa podataka**: lakši kontakt, centralizacija podataka
-**Dostupnost**: ove podatke mogu koristiti svi zainteresirani kao izvor informacija ili pomoć
+**Dostupnost**: ove podatke mogu koristiti svi zainteresirani kao izvor informacija ili pomoć 
 **Točnost podataka**: 95%  
 **Otvorena licenca**: [Creative Commons Zero v1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/)
 
