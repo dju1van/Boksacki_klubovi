@@ -1,7 +1,6 @@
 # Mali skup podataka hrvatskih boksačkih klubova
 
 **Jezik**: Hrvatski (hr)  
-**Otvorena licenca**: [Creative Commons Zero v1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/)
 **Ime autora**: Ivan Đurić  
 **Verzija skupa podataka**: 1.0  
 **Kodna stranica**: UTF-8  
@@ -9,6 +8,7 @@
 **Datum kreiranja**: 22-10-2024 (dd-mm-yyyy)  
 **Zadnje ažurirano**: 26-10-2024 (dd-mm-yyyy)  
 **Točnost podataka**: 95%  
+**Otvorena licenca**: [Creative Commons Zero v1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ## Opis atributa
 
