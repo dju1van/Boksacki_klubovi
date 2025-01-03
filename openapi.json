@@ -1,0 +1,231 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Boksacki klubovi u Hrvatskoj",
+        "description": "API for managing boxing clubs in Croatia",
+        "version": "3"
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "summary": "Render home page",
+                "responses": {
+                    "200": {
+                        "description": "Home page rendered",
+                        "content": "text/html"
+                    }
+                }
+            }
+        },
+        "/datatable": {
+            "get": {
+                "summary": "Get data from database in table and filter it",
+                "parameters": [
+                    {
+                        "name": "filterText",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Text to filter data"
+                    },
+                    {
+                        "name": "filterAttribute",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Attribute to filter data"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Filtered data fetched successfully",
+                        "content": "application/json"
+                    },
+                    "500": {
+                        "description": "Error while deleting club",
+                        "content": "application/json"
+                    }
+                }
+            }
+        },
+        "/counties": {
+            "get": {
+                "summary": "Get all counties",
+                "responses": {
+                    "200": {
+                        "description": "Counties data fetched successfully",
+                        "content": "application/json"
+                    },
+                    "500": {
+                        "description": "Error while deleting club",
+                        "content": "application/json"
+                    }
+                }
+            }
+        },
+        "/places": {
+            "get": {
+                "summary": "Get all places",
+                "responses": {
+                    "200": {
+                        "description": "Places data fetched successfully",
+                        "content": "application/json"
+                    },
+                    "500": {
+                        "description": "Error while deleting club",
+                        "content": "application/json"
+                    }
+                }
+            }
+        },
+        "/clubs": {
+            "get": {
+                "summary": "Get all boxing clubs",
+                "responses": {
+                    "200": {
+                        "description": "Clubs data fetched successfully",
+                        "content": "application/json"
+                    },
+                    "500": {
+                        "description": "Error while deleting club",
+                        "content": "application/json"
+                    }
+                }
+            }
+        },
+        "/clubs/{id}": {
+            "get": {
+                "summary": "Get club data by ID",
+                "description": "Gets details about club ID that is provided",
+                "parameters": [
+                    {
+                    "name": "id",
+                    "schema": {
+                        "type": "integer"
+                    },
+                    "description": "ID of the club"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Club data fetched successfully",
+                        "content": "application/json"
+                    },
+                    "404": {
+                        "description": "Club not found"
+                    },
+                    "500": {
+                        "description": "Error while deleting club",
+                        "content": "application/json"
+                    }
+                }
+            }
+        },
+        "/add": {
+            "post": {
+                "summary": "Add a new club",
+                "description": "Adds a club to database",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nazKlub": { "type": "string" },
+                                    "oib": { "type": "string" },
+                                    "email": { "type": "string" },
+                                    "adresa": { "type": "string" },
+                                    "mob": { "type": "string" },
+                                    "aktivan": { "type": "boolean" },
+                                    "idMjesta": { "type": "integer" }
+                                },
+                                "required": ["nazKlub", "oib", "email", "adresa", "idMjesta"]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Club added successfully",
+                        "content": "application/json"
+                    },
+                    "500": {
+                        "description": "Error while deleting club",
+                        "content": "application/json"
+                    }
+                }
+            }
+        },
+        "/update": {
+            "post": {
+                "summary": "Update a club",
+                "description": "Updates a club from the database based on oib",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "nazKlub": { "type": "string" },
+                                    "oib": { "type": "string" },
+                                    "email": { "type": "string" },
+                                    "adresa": { "type": "string" },
+                                    "mob": { "type": "string" },
+                                    "aktivan": { "type": "boolean" },
+                                    "idMjesta": { "type": "integer" },
+                                    "oibKluba": { "type": "string" }
+                                },
+                                "required": ["nazKlub", "oib", "email", "adresa", "idMjesta", "oibKluba"]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Club updated successfully",
+                        "content": "application/json"
+                    },
+                    "500": {
+                        "description": "Error while deleting club",
+                        "content": "application/json"
+                    }
+                }
+            }
+        },
+        "/delete": {
+            "post": {
+                "summary": "Delete a club",
+                "description": "Deletes a club from the database based on oib",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "oibKluba": {
+                                        "type": "string",
+                                        "description": "OIB of the club to be deleted"
+                                    }
+                                },
+                                "required": ["oibKluba"]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Club successfully deleted",
+                        "content": "application/json"
+                    },
+                    "500": {
+                        "description": "Error while deleting club",
+                        "content": "application/json"
+                    }
+                }
+            }
+        }
+    }
+}
