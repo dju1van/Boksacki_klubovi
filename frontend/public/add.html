@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="title" content="Mali skup podataka hrvatskih boksačkih klubova">
+    <meta name="author" content="Ivan Đurić">
+    <meta name="version" content="1.0">
+    <meta name="language" content="Hrvatski (hr)">
+    <meta name="date_created" content="22-10-2024">
+    <meta name="date_updated" content="26-10-2024">
+    <meta name="description" content="Svrha skupa podataka: lakši kontakt, centralizacija podataka">
+    <meta name="availability" content="Ove podatke mogu koristiti svi zainteresirani kao izvor informacija ili pomoć">
+    <meta name="accuracy" content="95%">
+    <meta name="license" content="Creative Commons Zero v1.0 Universal (CC0 1.0)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORlab3</title>
+    <link rel="stylesheet" href="style_index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dodaj novi klub</h1>
+        <form action="/add" method="post">
+            <label>Naziv kluba: </label>
+            <input type="text" name="nazKlub">
+            <br>
+            <label>OIB: </label>
+            <input type="text" name="oib">
+            <br>
+            <label>Email: </label>
+            <input type="text" name="email">
+            <br>
+            <label>Adresa: </label>
+            <input type="text" name="adresa">
+            <br>
+            <label>Mobitel: </label>
+            <input type="text" name="mob">
+            <br>
+            <label>Aktivan: </label>
+            <input type="radio" name="aktivan">
+            <br>
+            <label>Identifikator mjesta: </label>
+            <input type="number" name="idMjesta">
+            <br>
+            <button type="submit">Dodaj</button>
+        </form>
+    </div>
+</body>
+</html>

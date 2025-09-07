@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="title" content="Mali skup podataka hrvatskih boksačkih klubova">
+    <meta name="author" content="Ivan Đurić">
+    <meta name="version" content="1.0">
+    <meta name="language" content="Hrvatski (hr)">
+    <meta name="date_created" content="22-10-2024">
+    <meta name="date_updated" content="26-10-2024">
+    <meta name="description" content="Svrha skupa podataka: lakši kontakt, centralizacija podataka">
+    <meta name="availability" content="Ove podatke mogu koristiti svi zainteresirani kao izvor informacija ili pomoć">
+    <meta name="accuracy" content="95%">
+    <meta name="license" content="Creative Commons Zero v1.0 Universal (CC0 1.0)">
+    <title>Podaci u tablici</title>
+    <link rel="stylesheet" href="style_datatable.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="frontendScript.js"></script>
+</head>
+<body>
+    <form id="filterForm">
+        <label for="filterText">Filtriraj:</label>
+        <input type="text" id="filterText" name="filterText">
+        <select id="filterAttribute" name="filterAttribute">
+            <option value="sviAtributi">Svi atributi</option>
+            <option value="nazivKluba">Naziv Kluba</option>
+            <option value="oib">OIB</option>
+            <option value="email">Email</option>
+            <option value="adresa">Adresa</option>
+            <option value="mobitel">Mobitel</option>
+            <option value="aktivan">Aktivan</option>
+            <option value="nazivMjesta">Naziv mjesta</option>
+            <option value="postanskiBroj">Poštanski broj</option>
+            <option value="brojMjestana">Broj mještana</option>
+            <option value="nazivZupanije">Naziv županije</option>
+            <option value="glavniGrad">Glavni grad županije</option>
+            <option value="brojStanovnika">Broj stanovnika</option>
+        </select>
+        <button type="submit">Filtriraj</button>
+    </form>
+
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Naziv kluba</th>
+                <th>OIB</th>
+                <th>Email</th>
+                <th>Adresa</th>
+                <th>Mobitel</th>
+                <th>Aktivan</th>
+                <th>Naziv mjesta</th>
+                <th>Poštanski broj</th>
+                <th>Broj mještana</th>
+                <th>Naziv županije</th>
+                <th>Glavni grad županije</th>
+                <th>Broj stanovnika</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button id="download-csv">CSV format</button>
+    <button id="download-json">JSON format</button>
+</body>
+</html>
