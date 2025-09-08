@@ -11,7 +11,7 @@ Ovaj repozitorij sadrži 5 datoteka uključujući i ovu (README.md). Datoteka `B
 **Svrha skupa podataka**: lakši kontakt, centralizacija podataka  
 **Dostupnost**: ove podatke mogu koristiti svi zainteresirani kao izvor informacija ili pomoć  
 **Točnost podataka**: 95%  
-**Otvorena licenca**: [Creative Commons Zero v1.0 Universal (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/)
+**Otvorena licenca**: MIT licenca
 
 ## Opis atributa
 
@@ -37,3 +37,4 @@ Struktura u .csv datoteci postignuta je pomoću znaka `:` . Na primjer, za atrib
 `naziv_mjesta:postanski_broj_mjesta:broj_stanovnika_mjesta`
 
 Ova uređena trojka predstavlja jednu instancu atributa **mjesto**.
+
