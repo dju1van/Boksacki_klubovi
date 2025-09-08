@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "$id": "https://github.com/djuIvan/OR_lab/blob/main/boksKlubovi.json",
+    "$id": "https://github.com/dju1van/Boksacki_klubovi/blob/main/frontend/public/boksKlubovi.json",
     "type": "array",
     "default": [],
     "description": "Mali skup podataka hrvatskih boksačkih klubova",
